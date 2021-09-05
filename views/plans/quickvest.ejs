@@ -1,0 +1,52 @@
+<script src="/scripts/plans.js" defer></script>
+
+<%- include ('../partials/sidebar') %>
+
+<div class="quickvest">
+  <form action="/purchase-plan" method="POST" class="form">
+    <div class="right">Interest rate <span class="rate" name='rate'>12.5</span>%</span></div>
+    <div class="header">
+      <h2>Quickvest</h2>
+    </div>
+
+    <div class="form__group">
+      <label>Enter your principal</label>
+      <input
+        type="number"
+        name="principal"
+        id="principalBox"
+        min="50000"
+        placeholder="50000"
+        required
+      />
+    </div>
+
+    <div class="form__group">
+      <label>Duration</label>
+      <select name="duration" id="durationBox">
+        <option value="3">3 months</option>
+        <option value="6">6 months</option>
+        <option value="9">9 months</option>
+        <option value="12">12 months</option>
+      </select>
+    </div>
+
+    <div class="form__group">
+      <label>Rate</label>
+      <input
+        type="number"
+        name="rate"
+        value="12.5"
+        required
+      />
+    </div>
+
+    <div class="form__group">
+      Total amount <span class="amount">00000</span>
+    </div>
+
+    <div class="form__group">
+      <input type="submit" value="Submit" />
+    </div>
+  </form>
+</div>

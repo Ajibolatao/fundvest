@@ -1,0 +1,40 @@
+<script src="/scripts/plans.js" defer></script>
+
+<%- include ('../partials/sidebar') %>
+
+<div class="fundvest">
+  <form action="" class="form">
+    <div class="right">Interest rate <span class="color"><span class="rate">24</span>%</span></div>
+    <div class="header">
+      <h2>Fundvest</h2>
+    </div>
+
+    <div class="form__group">
+      <label>Enter your principal</label>
+      <input
+        type="number"
+        name=""
+        id="principalBox"
+        min="1000000"
+        placeholder="1000000"
+        required
+      />
+    </div>
+
+    <div class="form__group">
+      <label>Duration</label>
+      <select name="" id="durationBox">
+        <option value="9">9 months</option>
+        <option value="12">12 months</option>
+      </select>
+    </div>
+
+    <div class="form__group">
+      Total amount <span class="amount">00000</span>
+    </div>
+
+    <div class="form__group">
+      <input type="submit" value="Submit" />
+    </div>
+  </form>
+</div>

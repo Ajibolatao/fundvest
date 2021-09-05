@@ -1,0 +1,607 @@
+@import "./confiq";
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+// DASHBOARD
+.dashboard {
+  // MAIN
+  .main {
+    display: flex;
+    padding: 2rem 0;
+
+    // LEFT
+    .main__left {
+      background-color: lightgray;
+      width: 250px;
+      height: 100vh;
+      position: fixed;
+      padding: 1rem;
+      font-size: 1.2rem;
+
+      // For Mobile
+      display: none;
+      
+
+      // MENU
+      .menu {
+
+        .menu__items {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+
+          li {
+            // background-color: yellow;
+            transition: $transition;
+            height: 40px;
+
+            &:hover {
+              font-size: 1.3rem;
+            }
+          }
+        }
+
+      }
+
+      // LOGOUT
+      .logout {
+
+      }
+    }
+
+    // RIGHT
+    .main__right {
+      margin: 0;
+      width: 100%;
+
+      // BALANCES
+      .balances {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 0;
+
+        // BALANCE
+        .balance {
+          width: 300px;
+          background-color: lightblue;
+          padding: 1rem;
+          margin: 5px 0;
+          border-radius: 10px;
+
+          .balance__right {
+            text-align: right;
+          }
+
+          .balance__display {
+            text-align: center;
+            .balance__name {
+              font-size: 2rem;
+            }
+            .balance__amount {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+
+      // PLANS SECTION
+      .plans__sections {
+        padding: 2rem 0 3rem;
+
+        h2 {
+          text-align: center;
+          font-size: 2rem;
+          padding: 1rem 0;
+        }
+
+        // PLANS
+        .plans {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 1rem;
+
+          .plan {
+            width: 300px;
+            background-color: lightblue;
+            padding: 1rem 0.5rem;
+            border-radius: 10px;
+
+            .name {
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // FOOTER
+  .footer {
+    background-color: rgb(170, 139, 139);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+
+    ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      list-style: none;
+
+      li {
+        a {
+          i {
+            color: black;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  // LARGE SCREEN
+  @include largeScreen {
+    // MAIN
+    .main {
+      padding: 0;
+
+      // RIGHT
+      .main__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+
+      // LEFT
+      .main__right {
+        margin-left: 250px;
+
+        // BALANCES
+        .balances {
+          flex-direction: row;
+          justify-content: space-evenly;
+          flex-wrap: wrap;
+          gap: 1rem;
+
+          .balance {
+            width: 200px;
+          }
+        }
+
+        // PLANS SECTION
+        .plans__sections {
+
+          // PLANS
+          .plans {
+            display: flex;
+            flex-direction: row;
+          }
+        }
+      }
+    }
+
+    // FOOTER
+    .footer {
+      display: none;
+    }
+  }
+}
+
+
+// PROFILE
+.profile {
+  // MAIN
+  .main {
+    display: flex;
+    padding: 2rem 0;
+
+    // LEFT
+    .main__left {
+      background-color: lightgray;
+      width: 250px;
+      height: 100vh;
+      position: fixed;
+      padding: 1rem;
+      font-size: 1.2rem;
+
+      // For Mobile
+      display: none;
+      
+
+      // MENU
+      .menu {
+
+        .menu__items {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+
+          li {
+            // background-color: yellow;
+            transition: $transition;
+            height: 40px;
+
+            &:hover {
+              font-size: 1.3rem;
+            }
+          }
+        }
+
+      }
+
+      // LOGOUT
+      .logout {
+
+      }
+    }
+
+    // RIGHT
+    .main__right {
+      margin: 0;
+      width: 100%;
+
+  
+    }
+  }
+
+  // FOOTER
+  .footer {
+    background-color: rgb(170, 139, 139);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+
+    ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      list-style: none;
+
+      li {
+        a {
+          i {
+            color: black;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  // LARGE SCREEN
+  @include largeScreen {
+    // MAIN
+    .main {
+      padding: 0;
+
+      // RIGHT
+      .main__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+
+      // LEFT
+      .main__right {
+        margin-left: 250px;
+
+        // BALANCES
+        .balances {
+          flex-direction: row;
+          justify-content: space-evenly;
+          flex-wrap: wrap;
+          gap: 1rem;
+
+          .balance {
+            width: 200px;
+          }
+        }
+
+        // PLANS SECTION
+        .plans__sections {
+
+          // PLANS
+          .plans {
+            display: flex;
+            flex-direction: row;
+          }
+        }
+      }
+    }
+
+    // FOOTER
+    .footer {
+      display: none;
+    }
+  }
+}
+
+
+// INVESTMENT
+.investment {
+  // MAIN
+  .main {
+    display: flex;
+    padding: 2rem 0;
+
+    // LEFT
+    .main__left {
+      background-color: lightgray;
+      width: 250px;
+      height: 100vh;
+      position: fixed;
+      padding: 1rem;
+      font-size: 1.2rem;
+
+      // For Mobile
+      display: none;
+      
+
+      // MENU
+      .menu {
+
+        .menu__items {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+
+          li {
+            // background-color: yellow;
+            transition: $transition;
+            height: 40px;
+
+            &:hover {
+              font-size: 1.3rem;
+            }
+          }
+        }
+
+      }
+
+      // LOGOUT
+      .logout {
+
+      }
+    }
+
+    // RIGHT
+    .main__right {
+      margin: 0;
+      width: 100%;
+
+  
+    }
+  }
+
+  // FOOTER
+  .footer {
+    background-color: rgb(170, 139, 139);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+
+    ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      list-style: none;
+
+      li {
+        a {
+          i {
+            color: black;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  // LARGE SCREEN
+  @include largeScreen {
+    // MAIN
+    .main {
+      padding: 0;
+
+      // RIGHT
+      .main__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+
+      // LEFT
+      .main__right {
+        margin-left: 250px;
+
+        // BALANCES
+        .balances {
+          flex-direction: row;
+          justify-content: space-evenly;
+          flex-wrap: wrap;
+          gap: 1rem;
+
+          .balance {
+            width: 200px;
+          }
+        }
+
+        // PLANS SECTION
+        .plans__sections {
+
+          // PLANS
+          .plans {
+            display: flex;
+            flex-direction: row;
+          }
+        }
+      }
+    }
+
+    // FOOTER
+    .footer {
+      display: none;
+    }
+  }
+}
+
+
+// TRANSACTION
+.transaction {
+  // MAIN
+  .main {
+    display: flex;
+    padding: 2rem 0;
+
+    // LEFT
+    .main__left {
+      background-color: lightgray;
+      width: 250px;
+      height: 100vh;
+      position: fixed;
+      padding: 1rem;
+      font-size: 1.2rem;
+
+      // For Mobile
+      display: none;
+      
+
+      // MENU
+      .menu {
+
+        .menu__items {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+
+          li {
+            // background-color: yellow;
+            transition: $transition;
+            height: 40px;
+
+            &:hover {
+              font-size: 1.3rem;
+            }
+          }
+        }
+
+      }
+
+      // LOGOUT
+      .logout {
+
+      }
+    }
+
+    // RIGHT
+    .main__right {
+      margin: 0;
+      width: 100%;
+
+  
+    }
+  }
+
+  // FOOTER
+  .footer {
+    background-color: rgb(170, 139, 139);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+
+    ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      list-style: none;
+
+      li {
+        a {
+          i {
+            color: black;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  // LARGE SCREEN
+  @include largeScreen {
+    // MAIN
+    .main {
+      padding: 0;
+
+      // RIGHT
+      .main__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+
+      // LEFT
+      .main__right {
+        margin-left: 250px;
+
+        // BALANCES
+        .balances {
+          flex-direction: row;
+          justify-content: space-evenly;
+          flex-wrap: wrap;
+          gap: 1rem;
+
+          .balance {
+            width: 200px;
+          }
+        }
+
+        // PLANS SECTION
+        .plans__sections {
+
+          // PLANS
+          .plans {
+            display: flex;
+            flex-direction: row;
+          }
+        }
+      }
+    }
+
+    // FOOTER
+    .footer {
+      display: none;
+    }
+  }
+}
+
+
+// SIGNIN
+.signin {
+  width: 80%;
+  max-width: 500px;
+  margin: auto;
+  padding: 3rem 0;
+  // min-height: 100vh;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+}
+
+.signup {
+  width: 80%;
+  margin: auto;
+  max-width: 500px;
+  padding: 3rem 0;
+}
